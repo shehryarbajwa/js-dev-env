@@ -1,0 +1,34 @@
+What did we learn:
+
+1-It is better to create automation before running a project
+2-First we create a package.json file
+3-Then we add different dependencies in It
+4-Then we run npm install
+5-We use npm start to run our file
+6-Within package.json we can add scripts
+
+    "scripts": {
+        "prestart": "node buildScripts/startMessage.js",
+        "start" : "npm-run-all --parallel open:src",
+        "open:src": "node buildScripts/srcServer.js",
+        "localtunnel": "lt --port 3000",
+        "share": "npm-run-all --parallel open:src localtunnel"
+    }
+
+7-At start we add npm-run-all --parallel to create a parallel running environment
+8-Local tunnel is used to create a url which we can share to show work in progress
+9-On pre-start, we use the chalk library to color our cli
+
+10 - To transpile and use the latest JS features
+
+{
+  "presets": [
+    "latest"
+  ]
+}
+
+11- To transpile we need to add babel node to the scripts we need to run via babel
+
+
+
+
